@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 420px;
+            padding: 32px;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .card p.subtitle {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 6px;
+        }
+
+        .required {
+            color: #e53e3e;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 15px;
+            border: 1.5px solid #d1d5db;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        /* Trạng thái Focus rõ ràng */
+        .form-control:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .hint {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        /* Áp dụng Fitts' Law: Nút bấm lớn, full-width, dễ click */
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover {
+            background-color: #1d4ed8;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            text-align: center;
+            color: #6b7280;
+            margin-top: 20px;
+        }
+
+        .footer-text a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Responsive cho thiết bị nhỏ */
+        @media (max-width: 480px) {
+            .card {
+                padding: 24px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Tạo tài khoản</h2>
+    <p class="subtitle">Nhanh chóng và dễ dàng trong vài bước</p>
+
+    <form action="success.html" method="GET">
+        <div class="form-group">
+            <label for="fullname">Họ và tên <span class="required">*</span></label>
+            <input type="text" id="fullname" class="form-control" placeholder="Nguyễn Văn A" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Địa chỉ Email <span class="required">*</span></label>
+            <input type="email" id="email" class="form-control" placeholder="vidu@domain.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mật khẩu <span class="required">*</span></label>
+            <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+            <div class="hint">Tối thiểu 8 ký tự, bao gồm chữ và số.</div>
+        </div>
+
+        <div class="form-group">
+            <label for="confirm-password">Xác nhận mật khẩu <span class="required">*</span></label>
+            <input type="password" id="confirm-password" class="form-control" placeholder="••••••••" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Đăng ký ngay</button>
+    </form>
+
+    <div class="footer-text">
+        Đã có tài khoản? <a href="#">Đăng nhập</a>
+    </div>
+</div>
+
+</body>
+</html>
